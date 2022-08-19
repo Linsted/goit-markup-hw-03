@@ -17,13 +17,22 @@ h1,h2,h3,h4,h5,h6,ul,p {
     padding: 0;
 }
 
-.container {
+.section {
     width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
+}
+/* Resets  */
+.no-padding-bottom {
+    padding-bottom: 0;
+}
+.no-padding-top {
+    padding-top: 0;
 }
 
 /* Header */
@@ -38,6 +47,9 @@ font-family: raleway, arial, sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
+}
+.header {
+    border-bottom: 1px solid #ECECEC;
 }
 .header ul {
     list-style: none;
@@ -58,9 +70,10 @@ line-height: 1.19;
     letter-spacing: 0.02em;
       
 }
-.nav-list {
-    margin-right: 344px;
-}
+/* .nav-list {
+    margin-right: 347px;  - теж варіант ? 
+} */
+.nav-contacts {margin-left: auto;}
 
 .nav-list a{
     color: var(--primary-text-color);
@@ -95,14 +108,34 @@ line-height: 1.19;
 .main-links, .main-nav {
     display: flex;
     align-items: center;
+
 }
+.main-links {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.dim-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
 .nav-list-links:not(:last-child) {
     margin-right: 50px;
 }
 
 
 /* hero */
+.hero {
+    background-color: #2F303A;
+    text-align: center;
+}
+.hero-title {
+    padding: 200px 252px;
+}
 .main-title {
+    margin-bottom: 40px;
     font-size: 44px;
     line-height: 1.36;
     font-weight: 900;
@@ -113,6 +146,7 @@ line-height: 1.19;
     color: #FFFFFF;
 }
 .button-order { 
+    padding: 10px 32px;
     background-color: var(--brand-color);
     color: #FFFFFF;
 
@@ -159,22 +193,45 @@ line-height: 1.19;
 .features ul {
     list-style: none;
 }
+.features-items {
+    display: flex;
+    gap: 30px;
+
+}
+.features-items li {
+    width: calc((100%-3*30)/4)
+}
+
+
 /* Our work */
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    margin-bottom: 50px;
 }
 .our-work ul {
     list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.our-work li {
+    width: calc((100%-2*30)/3);
 }
 
 /* Our team */
-.our-team ul {
+.our-team {
+    background-color: #F5F4FA;
+}
+.our-team-list {
     list-style: none;
+    display: flex;
+    gap: 30px;
 }
 .team-names {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -182,12 +239,22 @@ line-height: 1.19;
     text-align: center;
 }
 .team-position {
+    padding-bottom: 30px;
+
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     
     color: #757575;
 }
+.our-team-list li {
+    width: calc((100%-3*30)/4);
+    background-color: #FFFFFF;
+}
+.our-team img {
+    margin-bottom: 30px;
+}
+
 /* Footer  */
 .footer {
     background-color: #2F303A;
@@ -197,6 +264,9 @@ line-height: 1.19;
     font-style: normal;
 }
 .logo-footer {
+    display: flex;
+    margin-bottom: 20px;
+    padding-top: 60px;
     font-family: raleway, arial, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -221,29 +291,54 @@ line-height: 1.19;
 }
 .footer-contacts:focus {
     color: var(--brand-color);}
+.footer li:not(:last-child) {
+    margin-bottom: 9px;
+
+}
 
 /* Portfolio page */ 
 /* Buttons */
 .portfolio-button {
+    border: 0px;
     background-color: #F5F4FA;
+    border-radius: 4px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     cursor: pointer;
+    
 }
-.portfolio-button:hover {
+.button-first {
+    padding: 6px 25.5px;
+}
+.button-second {
+    padding: 6px 24.5px;
+}
+.button-third {padding: 6px 23.5px;}
+.button-fourth {padding: 6px 23.5px;}
+.button-fifth {padding: 6px 24px;}
+
+.portfolio-button:hover,
+.portfolio-button:focus{
     background-color: var(--brand-color);
     color: #FFFFFF;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.portfolio-button:focus {
-    background-color: var(--brand-color);
-    color: #FFFFFF;
-}
-.nav-portfolio ul {
+ 
+.portfolio-list-button {
     list-style: none;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
 }
+.portfolio-cont  {
+padding-bottom: 50px;
+}
+
 /* Section portfolio */
+
 .section-portfolio ul {
     list-style: none;
 }
@@ -252,16 +347,32 @@ line-height: 1.19;
     color: var(--primary-text-color);
 }
 .portfolio-title {
+    padding-top: 20px;
+    padding-left: 24px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+
 }
 
 .portfolio-text {
+    padding-top: 4px;
+    padding-left: 24px;
+    padding-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
     
     color: #757575;
+}
+.portfolio-list {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: calc((100%-2*30)/3);
+    gap: 30px;
+}
+.portfolio-border {
+border: 1px solid #EEEEEE;
 }
