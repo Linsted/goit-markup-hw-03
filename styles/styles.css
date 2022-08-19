@@ -367,7 +367,6 @@ padding-bottom: 50px;
     color: #757575;
 }
 .portfolio-list {
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
