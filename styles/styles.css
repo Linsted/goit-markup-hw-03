@@ -370,9 +370,10 @@ padding-bottom: 50px;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    min-width: calc((100%-2*30)/3);
     gap: 30px;
+    
 }
 .portfolio-border {
-border: 1px solid #EEEEEE;
+    border: 1px solid #EEEEEE;
+    width: 370px;
 }
