@@ -12,11 +12,27 @@ font-family: roboto, arial, sans-serif;
 letter-spacing: 0.03em;
 font-size: 14px;
 }
+h1,h2,h3,h4,h5,h6,ul,p {
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 2px solid red;
+}
 
 /* Header */
 
 .logo {
+    display: flex;
+    margin-right: 93px;
+
+
 color: #000000;
 font-family: raleway, arial, sans-serif;
 font-weight: 700;
@@ -36,27 +52,31 @@ line-height: 1.19;
 }
 
 .nav-list {
+    display: flex;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    
-    
+      
 }
+.nav-list {
+    margin-right: 344px;
+}
+
 .nav-list a{
     color: var(--primary-text-color);
 }
-.nav-list a:hover {
-    color: var(--brand-color);
-}
+.nav-list a:hover,
 .nav-list a:focus {
     color: var(--brand-color);
 }
 
 .nav-contacts {
+    display: flex;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+
 .nav-contacts a {
     color: #757575;
 }
@@ -72,6 +92,15 @@ line-height: 1.19;
 .nav-list .portfolio {
     color: var(--brand-color);
 }
+.main-links, .main-nav {
+    display: flex;
+    align-items: center;
+}
+.nav-list-links:not(:last-child) {
+    margin-right: 50px;
+}
+
+
 /* hero */
 .main-title {
     font-size: 44px;
