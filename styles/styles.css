@@ -16,17 +16,23 @@ h1,h2,h3,h4,h5,h6,ul,p {
     margin: 0;
     padding: 0;
 }
-
-.section {
+img {
+    display: block;
+}
+.container {
     width: 1200px;
-    padding-top: 94px;
-    padding-bottom: 94px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
     /* outline: 2px solid red; */
 }
+
+.section-paddings {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 /* Resets  */
 .no-padding-bottom {
     padding-bottom: 0;
@@ -38,9 +44,7 @@ h1,h2,h3,h4,h5,h6,ul,p {
 /* Header */
 
 .logo {
-    display: flex;
-    margin-right: 93px;
-
+margin-right: 93px;
 
 color: #000000;
 font-family: raleway, arial, sans-serif;
@@ -70,13 +74,14 @@ line-height: 1.19;
     letter-spacing: 0.02em;
       
 }
-/* .nav-list {
-    margin-right: 347px;  - теж варіант ? 
-} */
+
 .nav-contacts {margin-left: auto;}
 
 .nav-list a{
     color: var(--primary-text-color);
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .nav-list a:hover,
 .nav-list a:focus {
@@ -92,6 +97,9 @@ line-height: 1.19;
 
 .nav-contacts a {
     color: #757575;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .nav-contacts a:hover {
@@ -108,18 +116,7 @@ line-height: 1.19;
 .main-links, .main-nav {
     display: flex;
     align-items: center;
-
 }
-.main-links {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.dim-padding {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
 
 .nav-list-links:not(:last-child) {
     margin-right: 50px;
@@ -130,9 +127,11 @@ line-height: 1.19;
 .hero {
     background-color: #2F303A;
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-title {
-    padding: 200px 252px;
+    width: 700px
 }
 .main-title {
     margin-bottom: 40px;
@@ -198,13 +197,19 @@ line-height: 1.19;
     gap: 30px;
 
 }
+.features-items h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 .features-items li {
     width: calc((100%-3*30)/4)
 }
 
 
 /* Our work */
-
+.our-work {
+    padding-bottom: 94px;
+}
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -239,7 +244,6 @@ line-height: 1.19;
     text-align: center;
 }
 .team-position {
-    padding-bottom: 30px;
 
     font-size: 16px;
     line-height: 1.19;
@@ -251,12 +255,16 @@ line-height: 1.19;
     width: calc((100%-3*30)/4);
     background-color: #FFFFFF;
 }
-.our-team img {
-    margin-bottom: 30px;
+.our-team div {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 /* Footer  */
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-color: #2F303A;
 }
 .footer a {
@@ -266,7 +274,6 @@ line-height: 1.19;
 .logo-footer {
     display: flex;
     margin-bottom: 20px;
-    padding-top: 60px;
     font-family: raleway, arial, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -332,6 +339,7 @@ line-height: 1.19;
     display: flex;
     gap: 8px;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .portfolio-cont  {
 padding-bottom: 50px;
@@ -343,12 +351,13 @@ padding-bottom: 50px;
     list-style: none;
 }
 .section-portfolio a {
+    display: block;
     text-decoration: none;
     color: var(--primary-text-color);
 }
 .portfolio-title {
-    padding-top: 20px;
-    padding-left: 24px;
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -357,9 +366,6 @@ padding-bottom: 50px;
 }
 
 .portfolio-text {
-    padding-top: 4px;
-    padding-left: 24px;
-    padding-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
@@ -375,4 +381,7 @@ padding-bottom: 50px;
 .portfolio-border {
     border: 1px solid #EEEEEE;
     width: 370px;
+}
+.portfolio-border div{
+    padding: 20px 24px;
 }
